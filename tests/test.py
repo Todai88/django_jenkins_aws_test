@@ -12,3 +12,9 @@ class TestCalculator(TestCase):
         actual = Calculator().add(1, 1)
 
         self.assertEqual(expected, actual, "Incorrect addition result\n")
+
+    def test_invalid_add(self):
+        expected = 3
+        actual = Calculator().add(1, 1)
+
+        self.assertNotEqual(expected, actual, "Incorrect addition result\n")
